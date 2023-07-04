@@ -5,7 +5,7 @@
 		"build": "vite build",
 		"server": "node ./server",
 		"server:prod": "cross-env NODE_ENV=production node ./server",
-		"deploy": "npm run lint && npm run build && pm2 kill && cross-env NODE_ENV=production pm2 start --name finding-integrity ./server",
+		"deploy": "npm run lint && npm run build && pm2 kill && cross-env NODE_ENV=production pm2 start --name finding-integrity ./server/index.js",
 		"lint": "eslint . --max-warnings 0"
 	},
 	"dependencies": {
