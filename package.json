@@ -9,6 +9,7 @@
 		"lint": "eslint . --max-warnings 0"
 	},
 	"dependencies": {
+		"@mdx-js/rollup": "^2.3.0",
 		"@vitejs/plugin-react": "^3.0.0",
 		"compression": "^1.7.4",
 		"cross-env": "^7.0.3",
@@ -23,5 +24,6 @@
 		"sirv": "^2.0.2",
 		"vite": "^4.0.3",
 		"vite-plugin-ssr": "^0.4.132"
-	}
+	},
+	"type": "module"
 }
