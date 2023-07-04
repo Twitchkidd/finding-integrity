@@ -1,14 +1,14 @@
-import './code.css'
+import './code.css';
 
-export { Page }
+export { Page };
 
 function Page() {
-  return (
-    <>
-      <h1>About</h1>
-      <p>
-        Example of using <code>vite-plugin-ssr</code>.
-      </p>
-    </>
-  )
+	return (
+		<>
+			<h1>About</h1>
+			<p>
+				Hey, my name's Integrity, welcome to my site, it's getting a reboot!
+			</p>
+		</>
+	);
 }
