@@ -1,19 +1,64 @@
 /* This CSS is common to all pages */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;700;900&display=swap');
 
-body {
-  margin: 0;
-  font-family: sans-serif;
+:root {
+  --ff: 'Saira Extra Condensed', sans-serif;
+  --fw-title: 100;
+  --fw-header: 700;
+  --fw-body: 200;
+
+  --blue: #5bcefa;
+  --white: #fefefe;
+  --pink: #f5a9b8;
+  --magenta: #D70270;
+  --deep-lavender: #734F96;
+  --royal-blue: #0038A8;
+  --black: #14141d;
+  --yellow: #ffb900;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --fw-header: 900;
+    --fw-body: 300;
+  }
+}
+
 * {
-  box-sizing: border-box;
+  margin: 0;
 }
+
+html {
+  box-sizing: border-box;
+
+  color-scheme: dark light;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {  
+  font-family: var(--ff);
+  font-weight: var(--fw-body);
+  font-size: clamp(1.25rem, 2.4vw + 0.5rem, 2rem);
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-weight: var(--fw-title);
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: var(--fw-header);
+}
+
 a {
   text-decoration: none;
 }
 
-.navitem {
-  padding: 3px 10px;
-}
-.navitem.is-active {
-  background-color: #eee;
+.content {
+  width: min(50ch, 100% - 2rem);
+  margin-inline: auto;
 }
