@@ -12,12 +12,13 @@
 <path d="M92.5 45.5L84.5 43.5L83 45.5L92.5 47V45.5Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
 <path d="M114.507 45.2511L106.413 43.6725L105.02 45.7483L114.585 46.749L114.507 45.2511Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
 <path d="M141.955 41.1376L140.594 37.7613L134.993 41.8693L125.807 45.3487L125.911 46.3432L135.255 44.3556L141.955 41.1376Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
-<path d="M135 52V141.5L133.5 144H136V52" stroke="#14141D" stroke-width="2" stroke-linejoin="round"/>
-<path d="M65.5 51.5H137" stroke="#14141D" stroke-width="2" stroke-linejoin="round"/>
-<line x1="68" y1="89" x2="134" y2="89" stroke="#14141D" stroke-width="2"/>
-<line x1="68" y1="142.5" x2="134" y2="142.5" stroke="#14141D" stroke-width="3"/>
-<path d="M66 65L64.5 51H68V143.5H64.5V141.5L66 134.5V65Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
-<path d="M56.5 141.5L64.5 143L66.5 140L60.5 139L54 136.5L48 133L43 129L38.5 124.5L33 117L35.5 123.5L38.5 129.5L43 134.5L49.5 139L56.5 141.5Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
-<path d="M70 45.5L61 42.5L59.5 45.5L70 47V45.5Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
+<path d="M135 52V136.636L133.5 139H136V52" stroke="#14141D" stroke-width="2" stroke-linejoin="round"/>
+<path d="M65.5 53.5H137" stroke="#14141D" stroke-width="5" stroke-linejoin="round"/>
+<line x1="68" y1="91" x2="134" y2="91" stroke="#14141D" stroke-width="4"/>
+<line x1="68" y1="137.5" x2="134" y2="137.5" stroke="#14141D" stroke-width="5"/>
+<path d="M66 64.3946L64.5 51H68V139.5H64.5V137.586L66 130.889V64.3946Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
+<path d="M56 138.5L64.5 139L66.5 136L60.5 135L54 132.5L47 129.5L42 125.5L38 120.5L33 113L34.5 120L37 126L40 132L44 135L49 137L56 138.5Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
+<path d="M70 45L59.7143 41L58 45L70 47V45Z" fill="#14141D" stroke="#14141D" stroke-linejoin="round"/>
 <circle cx="90" cy="90" r="85.5" stroke="#14141D"/>
+<rect x="136" y="51" width="1" height="1" fill="#F5A9B8"/>
 </svg>
