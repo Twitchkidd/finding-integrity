@@ -33,7 +33,10 @@ const newPost = () => {
 	title: '${title}',
 	date: '${yearMonthDay}',
 	author: 'Integrity'
-};`;
+};
+
+# {documentProps.title}
+`;
 			writeFile(file, frontMatter, err => {
 				if (err) throw err;
 				console.log('Welcome back!');
