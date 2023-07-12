@@ -1,4 +1,4 @@
-import { readdir, readFileSync } from 'node:fs';
+import { readdir, readdirSync, readFileSync } from 'node:fs';
 // import { compileSync } from '@mdx-js/mdx';
 // import { documentProps } from './pages/blog/posts/2023-07-06.page.mdx';
 
@@ -19,19 +19,22 @@ export function onBeforeRender(pageContext) {
 
 	const postsPath = `./pages/blog/posts/`;
 
-	readdir(postsPath, (err, files) => {
-		if (err) throw err;
-		const mdxFiles = files.filter(fName => fName.slice(10) === '.page.mdx');
-		mdxFiles.forEach(file => {
-			const compiled = compileSync(readFileSync(postsPath + file).value).value;
-			console.log(compiled);
-		});
-	});
+	// readdir(postsPath, (err, files) => {
+	// 	if (err) throw err;
+	// 	const mdxFiles = files.filter(fName => fName.slice(10) === '.page.mdx');
+	// 	mdxFiles.forEach(file => {
+	// 		const compiled = compileSync(readFileSync(postsPath + file).value).value;
+	// 		console.log(compiled);
+	// 	});
+	// });
 
-	// const slugs = mdxFiles.map(f => f.replace(/\.page\.mdx$/, ''));
+	const files = readdirSync(postsPath);
 
-	// const pageProps = { posts: slugs };
-	const pageProps = { posts: 'fermf' };
+	const mdxFiles = files.filter(fName => fName.slice(10) === '.page.mdx');
+
+	const slugs = mdxFiles.map(f => f.replace(/\.page\.mdx$/, ''));
+
+	const pageProps = { posts: slugs };
 
 	return {
 		pageContext: {
