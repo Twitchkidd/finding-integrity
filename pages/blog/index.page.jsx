@@ -1,12 +1,13 @@
 function Page(pageProps) {
-	console.log(pageProps);
 	return (
 		<>
 			<p>Posts:</p>
 			<ul>
-				{[...pageProps].map((post, i) => (
+				{pageProps.posts.map((post, i) => (
 					<li key={i}>
-						<a href={`/blog/posts/${post.slug}`}>{post.title}</a>
+						<a href={`/blog/posts/${post.slug}`}>
+							{post.title} - {post.date}
+						</a>
 					</li>
 				))}
 			</ul>
