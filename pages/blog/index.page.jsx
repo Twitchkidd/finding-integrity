@@ -1,7 +1,7 @@
 function Page(pageProps) {
 	return (
 		<>
-			<p style={{ paddingTop: '24rem' }}>Posts:</p>
+			<p>Posts:</p>
 			<ul>
 				{[...pageProps.posts].map((slug, i) => (
 					<li key={i}>
