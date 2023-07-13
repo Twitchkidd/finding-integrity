@@ -15,7 +15,8 @@ export async function onBeforeRender(pageContext) {
 			sort by date and export
 	*/
 
-	const postsPath = `./posts`;
+	const nodePostsPath = `./pages/blog/posts/`;
+	const importPostsPath = `./posts`;
 
 	let posts = [];
 
@@ -24,18 +25,19 @@ export async function onBeforeRender(pageContext) {
 	try {
 		// const mdxMod = await import(postsPath + '2023-07-06.page.mdx');
 		// console.log(mdxMod.documentProps.title);
-		const files = await readdir(postsPath);
-		// const mdxFiles = files.filter(fName => fName.slice(10) === '.page.mdx');
-		// const postData = mdxFiles.map(file => {
-		// 	console.log(file);
-		// 	console.log(postsPath + file);
-		// 	const title = import(postsPath + file).documentProps.title;
-		// 	return {
-		// 		slug: getSlug(file),
-		// 		title,
-		// 	};
-		// });
-		// posts = postData;
+		const files = await readdir(nodePostsPath);
+		const mdxFiles = files.filter(fName => fName.slice(10) === '.page.mdx');
+		const postData = mdxFiles.map(file => {
+			const mod = import(importPostsPath + file);
+			// console.log(mod.documentProps);
+			const title = 'fermf';
+			return {
+				slug: getSlug(file),
+				title,
+			};
+		});
+		// console.log(postData);
+		posts = postData;
 		// const testMod = await import('./posts/test.js');
 		// console.log(testMod.testExport);
 		// console.log(documentProps);
@@ -71,7 +73,8 @@ export async function onBeforeRender(pageContext) {
 
 	// const pageProps = { posts: slugs };
 	// const pageProps = { posts: 'fermf' };
-	const pageProps = { posts };
+
+	const pageProps = posts;
 
 	return {
 		pageContext: {
